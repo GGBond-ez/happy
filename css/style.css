@@ -63,6 +63,27 @@ h1, h2, span {
     -webkit-text-fill-color: transparent;
   }
 
+  /* 蛋糕、蜡烛、烟花等关键元素 */
+  .cake, .candle, .pyro, .plate {
+    position: relative;
+    z-index: 10; /* 确保高于音频控件 */
+  }
+
+  /* 示例：调整蛋糕位置 */
+  .cake {
+    top: 150px; /* 原为 250px */
+  }
+
+/* 调整蜡烛位置 */
+.candle {
+  top: 180px; /* 原为 280px */
+}
+
+  /* 音频控件 */
+  audio, .audio-controls {
+    z-index: 1; /* 降低层级 */
+  }
+
   bokeh {
     position: fixed;
     width: 2vmin;
@@ -978,4 +999,3 @@ h1, h2, span {
     }
   }
 }
-
