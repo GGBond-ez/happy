@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Concert+One|Pacifico");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=ZCOOL+KuaiLe&display=swap");
 .mobile {
   position: fixed;
   text-align: center;
@@ -58,6 +59,8 @@ h1, h2, span {
     width: 100%;
     top: 50px;
     font-size: 90px;
+    font-family: 'Concert One', cursive;
+    font-family: 'ZCOOL KuaiLe', cursive;
     background: -webkit-linear-gradient(90deg, #e9e6ff 0%, white 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -978,3 +981,4 @@ h1, h2, span {
     }
   }
 }
+
