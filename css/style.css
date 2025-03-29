@@ -8,13 +8,58 @@
   display: block;
 }
 
+
+
 h1, h2, span {
   display: none;
 }
 
+
 @media screen and (min-width: 670px) {
   .mobile {
     display: none;
+  }
+
+  .music-btn {
+    position: fixed;
+    left: 44%;
+    bottom: -400px;
+    transform: translateX(-50%);
+    z-index: 1000;
+    
+    /* 可爱风格 */
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Pacifico', cursive;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 154, 158, 0.3);
+    transition: all 0.3s;
+    
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .music-btn:hover {
+    transform: translateX(-50%) scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 154, 158, 0.4);
+  }
+  
+  .music-btn .icon {
+    transition: transform 0.3s;
+  }
+  
+  .music-btn.playing .icon {
+    animation: musicNote 0.6s ease-in-out infinite;
+  }
+  
+  @keyframes musicNote {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
   }
 
   h1, h2, span {
@@ -61,27 +106,6 @@ h1, h2, span {
     background: -webkit-linear-gradient(90deg, #e9e6ff 0%, white 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
-
-  /* 蛋糕、蜡烛、烟花等关键元素 */
-  .cake, .candle, .pyro, .plate {
-    position: relative;
-    z-index: 10; /* 确保高于音频控件 */
-  }
-
-  /* 示例：调整蛋糕位置 */
-  .cake {
-    top: 150px; /* 原为 250px */
-  }
-
-/* 调整蜡烛位置 */
-.candle {
-  top: 180px; /* 原为 280px */
-}
-
-  /* 音频控件 */
-  audio, .audio-controls {
-    z-index: 1; /* 降低层级 */
   }
 
   bokeh {
