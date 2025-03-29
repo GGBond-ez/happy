@@ -26,8 +26,6 @@ h1, h2, span {
     bottom: -400px;
     transform: translateX(-50%);
     z-index: 1000;
-    
-    /* 可爱风格 */
     padding: 12px 25px;
     border: none;
     border-radius: 25px;
@@ -38,7 +36,6 @@ h1, h2, span {
     cursor: pointer;
     box-shadow: 0 4px 15px rgba(255, 154, 158, 0.3);
     transition: all 0.3s;
-    
     display: flex;
     align-items: center;
     gap: 8px;
@@ -50,6 +47,7 @@ h1, h2, span {
   }
   
   .music-btn .icon {
+    margin-left: 200px; 
     transition: transform 0.3s;
   }
   
